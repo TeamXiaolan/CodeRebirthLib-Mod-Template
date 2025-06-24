@@ -3,12 +3,12 @@
   <PropertyGroup>
     <!-- The package metadata. -->
     <!-- Follow the instructions on https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices -->
-    <PackageId>Xilophor.LCModTemplates</PackageId>
-    <Title>Xilo's Lethal Company Mod Templates</Title>
-    <Authors>Xilophor</Authors>
-    <Description>Templates you can use to quickly spin up a new mod for Lethal Company.</Description>
+    <PackageId>TeamXiaolan.CRLibTemplate</PackageId>
+    <Title>CodeRebirthLib LethalCompany Template</Title>
+    <Authors>loaforc</Authors>
+    <Description>Template to quickly create a mod that uses CodeRebirthLib. Based on Xilo's template</Description>
     <PackageTags>lethalcompany;lc;lcmod;lethalcompanymod;templates</PackageTags>
-    <PackageProjectUrl>https://github.com/Xilophor/Lethal-Company-Mod-Templates</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/TeamXiaolan/Lethal-Company-Mod-Templates</PackageProjectUrl>
     <MinVerDefaultPreReleaseIdentifiers>dev</MinVerDefaultPreReleaseIdentifiers>
     <MinVerTagPrefix>v</MinVerTagPrefix>
 
@@ -30,7 +30,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.TemplateEngine.Tasks" Version="*" PrivateAssets="all" IsImplicitlyDefined="true"/>
-    <PackageReference Include="MinVer" Version="4.*" PrivateAssets="all"/>
   </ItemGroup>
 
   <ItemGroup>

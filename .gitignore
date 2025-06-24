@@ -8,7 +8,7 @@
 !.editorconfig
 !.github
 !content
-!Xilophor.LCModTemplates.csproj
+!TeamXiaolan.CRLibTemplate.csproj
 
 #Remove Files
 **/bin

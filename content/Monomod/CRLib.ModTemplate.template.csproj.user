@@ -13,10 +13,18 @@
     <!-- Copy to Plugin Directory for Quicker Testing -->
 <!--#if (UseNetcodePatcher) -->
     <Target Name="CopyFiles" DependsOnTargets="NetcodePatch" AfterTargets="PostBuildEvent">
-<!--#else -->
-    <Target Name="CopyFiles" AfterTargets="PostBuildEvent">
-<!--#endif -->
-        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(CopyToDirectory)"/>
+        <MakeDir
+            Directories="$(CopyToDirectory)$(Product)-DEV/Assets"
+            Condition="!Exists('$(CopyToDirectory)$(Product)-DEV/Assets')"
+        />
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(CopyToDirectory)$(Product)-DEV"/>
+
+        <ItemGroup>
+            <AssetBundles Include="$(ProjectDir)res/*" />
+            <AssetBundles Remove="$(ProjectDir)res/*.meta" />
+            <Assetbundles Remove="$(ProjectDir)res/*.manifest" />
+        </ItemGroup>
+        <Copy SourceFiles="@(AssetBundles)" DestinationFolder="$(CopyToDirectory)$(Product)-DEV/Assets/"/>
     </Target>
 <!--#endif -->
 </Project>
