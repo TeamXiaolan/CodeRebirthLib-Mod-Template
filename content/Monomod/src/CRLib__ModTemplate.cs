@@ -12,6 +12,7 @@ using CodeRebirthLib.Extensions;
 namespace CRLib._ModTemplate;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency(CodeRebirthLib.MyPluginInfo.PLUGIN_GUID)]
 public class CRLib__ModTemplate : BaseUnityPlugin
 {
     internal new static ManualLogSource Logger { get; private set; } = null!;
